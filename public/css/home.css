@@ -14,7 +14,7 @@ body {
     background-color: var(--main-background-color);
 }
 
-/* HEADER -- NAV AND LOGO */
+/* HEADER -- NAV */
 header {
     background-color: var(--header-color);
     margin-left: -1%;
@@ -32,6 +32,7 @@ header {
 .nav-buttons {
     background-color: var(--main-background-color);
     color: var(--brown-text);
+    font-family: Rubik;
     font-size: 1rem;
     margin: .25%;
     padding: 1%;
@@ -39,6 +40,7 @@ header {
     border-style: hidden;
 }
 
+/* HEADER -- LOGO */
 .logo-position {
     display: block;
     justify-content: left;
@@ -47,15 +49,18 @@ header {
 
 #logo {
     color: var(--cream-text);
+    font-family: Rubik Lines;
+    font-size: 4rem;
     margin-top: 0%;
     margin-bottom: 0%;
 }
 
 #subtitle {
     color: var(--brown-text);
+    font-family: Rubik Lines;
+    font-size: 2rem;
     margin-top: 0%;
-    margin-left: 2.8%;
-    font-size: 1.2rem;
+    margin-left: 6%;
 }
 
 .dashboard-container {
@@ -79,12 +84,16 @@ header {
 }
 
 #categories {
-    color: var(--cream-text);
+    color: var(--brown-text);
+    font-family: Rubik Lines;
+    font-size: 2rem;
     text-align: center;
 }
 
 #category-links {
     color: var(--brown-text);
+    font-family: Rubik;
+    font-size: 1.2rem;
     text-align: left;
 }
 
@@ -123,6 +132,8 @@ header {
 
 #post-title {
     color: var(--brown-text);
+    font-size: 1.5rem;
+    font-family: Rubik Lines;
     display: block;
     word-wrap: break-word;
     text-align: left;
@@ -132,6 +143,8 @@ header {
 
 #post-author {
     color: var(--brown-text);
+    font-size: 1rem;
+    font-family: Rubik;
     display: block;
     word-wrap: break-word;
     text-align: right;
@@ -141,6 +154,8 @@ header {
 
 .post-content {
     color: var(--cream-text);
+    font-size: 1.2rem;
+    font-family: Rubik;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
