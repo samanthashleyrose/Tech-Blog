@@ -167,3 +167,43 @@ header {
     margin-top: 4%;
     padding: 2%;
 }
+
+.dropdown-btn {
+    padding: 10px;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 5px;
+    border-style: hidden;
+}
+
+.dropdown-categories {
+    display: none;
+    position: absolute;
+    background-color: var(--input-box-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-category {
+    color: var(--brown-text);
+    padding: 12px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+}
+
+.dropdown-category:hover {
+    background-color: var(--input-box-color);
+    color: var(--brown-text);
+}
+
+.dropdown-btn:hover + .dropdown-categories {
+    display: block;
+}
