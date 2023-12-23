@@ -1,8 +1,7 @@
 /* MAIN COLORS & FONT SIZES */
 :root {
-    --header-color: rgba(22, 66, 13, 0.619);
+    --header-color: rgb(112, 141, 107);
     --sidebar-color: rgba(22, 66, 13, 0.326);
-    --nav-background-color: rgb(93, 139, 88);
     --brown-text: rgba(69, 54, 13, 0.918);
     --cream-text: rgb(242, 231, 212);
     --main-background-color: rgb(242, 231, 212);
@@ -11,7 +10,6 @@
 
 body {
     color: var(--main-text-color);
-    background-color: var(--main-background-color);
 }
 
 /* HEADER -- NAV */
@@ -72,6 +70,10 @@ header {
     flex-direction: row;
     flex-wrap: nowrap;
     max-width: 100%;
+}
+
+main {
+    background-color: var(--main-background-color);
 }
 
 /* SIDEBAR NAV */
