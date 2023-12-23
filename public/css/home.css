@@ -178,5 +178,66 @@ main {
 
 #post-data {
     margin-top: 4%;
+    margin-bottom: 4%;
     max-width: 100%;
+}
+
+/* COMMENTS */
+.comment-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+#comment-btn {
+    background-color: var(--brown-text);
+    color: var(--cream-text);
+    font-family: Rubik;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#new-comment-textarea {
+    background-color: var(--main-background-color);
+    color: var(--brown-text);
+    font-size: 1.2rem;
+    font-family: Rubik;
+    border-radius: 5px;
+    margin-top: 4%;
+    padding: 2%;
+    width: 95%;
+}
+
+.submit-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.submit-comment-btn,
+.cancel-comment-btn {
+    background-color: var(--brown-text);
+    color: var(--cream-text);
+    font-family: Rubik;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-right: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
