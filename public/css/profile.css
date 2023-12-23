@@ -72,3 +72,76 @@ header {
     justify-content: center;
     width: 100%;
 }
+
+/* PROFILE INFO */
+.profile-container {
+    display: block;
+    margin: 5%;
+}
+
+.profile-card {
+    background-color: var(--header-color);
+    box-shadow: 1px 4px 5px rgba(69, 54, 13, 0.918);
+    border-radius: 5px;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin-top: 0%;
+    width: 80%;
+}
+
+.send-btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    width: 99%;
+}
+
+.update-profile-btn {
+    background-color: var(--button-color);
+    color: var(--cream-text);
+    font-family: Rubik;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.profile-content {
+    /* background-color: var(--main-background-color); */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 95%;
+}
+
+#user-first-name {
+    background-color: var(--main-background-color);
+    color: var(--brown-text);
+    font-size: 1.2rem;
+    font-family: Rubik;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    padding: 2%;
+}
+
+#user-last-name,
+#profile-email {
+    background-color: var(--main-background-color);
+    color: var(--brown-text);
+    font-size: 1.2rem;
+    font-family: Rubik;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    padding: 2%;
+}
