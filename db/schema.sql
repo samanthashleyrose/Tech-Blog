@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS betcha_db;
+
+CREATE DATABASE betcha_db;
