@@ -1,7 +1,7 @@
 /* MAIN COLORS & FONT SIZES */
 :root {
     --header-color: rgba(22, 66, 13, 0.619);
-    --sidebar-color: rgba(22, 66, 13, 0.457);
+    --sidebar-color: rgba(22, 66, 13, 0.326);
     --nav-background-color: rgb(93, 139, 88);
     --brown-text: rgba(69, 54, 13, 0.918);
     --cream-text: rgb(242, 231, 212);
@@ -35,32 +35,36 @@ header {
     font-family: Rubik;
     font-size: 1rem;
     margin: .25%;
-    padding: 1%;
+    padding: .5%;
     border-radius: 5px;
     border-style: hidden;
+    box-shadow: 1px 4px 5px rgba(69, 54, 13, 0.918);
 }
 
 /* HEADER -- LOGO */
 .logo-position {
     display: block;
     justify-content: left;
-    margin-left: 10%;
+    width: 50%;
 }
 
 #logo {
     color: var(--cream-text);
+    text-shadow: 1px 5px 5px rgba(69, 54, 13, 0.918);
     font-family: Rubik Lines;
     font-size: 4rem;
     margin-top: 0%;
     margin-bottom: 0%;
+    text-align: center;
 }
 
 #subtitle {
     color: var(--brown-text);
+    text-shadow: 1px 1px 5px rgba(242, 231, 212, 0.5);
     font-family: Rubik Lines;
     font-size: 2rem;
     margin-top: 0%;
-    margin-left: 6%;
+    text-align: center;
 }
 
 .dashboard-container {
@@ -85,8 +89,10 @@ header {
 
 #categories {
     color: var(--brown-text);
+    text-shadow: 1px 1px 5px rgba(242, 231, 212, 0.5);
     font-family: Rubik Lines;
     font-size: 2rem;
+    margin-bottom: 2%;
     text-align: center;
 }
 
@@ -94,7 +100,8 @@ header {
     color: var(--brown-text);
     font-family: Rubik;
     font-size: 1.2rem;
-    text-align: left;
+    padding: 0%;
+    text-align: center;
 }
 
 /* POSTS */
@@ -110,6 +117,7 @@ header {
 
 .post-card {
     background-color: var(--header-color);
+    box-shadow: 1px 4px 5px rgba(69, 54, 13, 0.918);
     border-radius: 5px;
     padding: 3%;
     display: block;
@@ -132,6 +140,7 @@ header {
 
 #post-title {
     color: var(--brown-text);
+    text-shadow: 1px 1px 5px rgba(242, 231, 212, 0.5);
     font-size: 1.5rem;
     font-family: Rubik Lines;
     display: block;
@@ -145,6 +154,7 @@ header {
     color: var(--brown-text);
     font-size: 1rem;
     font-family: Rubik;
+    font-style: italic;
     display: block;
     word-wrap: break-word;
     text-align: right;
