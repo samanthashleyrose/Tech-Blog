@@ -88,6 +88,7 @@ label {
 #login-in-btn {
     background-color: var(--button-color);
     color: var(--cream-text);
+    box-shadow: hsla(15, 87%, 30%, 0.292) 0px 3px 5px 1px;
     font-family: Rubik Lines;
     font-size: 1.7rem;
     margin-top: 1%;
@@ -104,6 +105,7 @@ label {
 #sign-up-btn {
     background-color: var(--button-color);
     color: var(--cream-text);
+    box-shadow: hsla(15, 87%, 30%, 0.292) 0px 3px 5px 1px;
     font-family: Rubik Lines;
     font-size: 1.7rem;
     margin-top: 1%;
@@ -116,4 +118,9 @@ label {
     border-radius: 5px;
     border-style: hidden;
     width: 15%;
+}
+
+button:active {
+    transform: translateY(5px);
+    transition: 200ms;
 }
