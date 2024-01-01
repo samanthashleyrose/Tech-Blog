@@ -52,16 +52,23 @@ header {
 }
 
 /* INPUT FIELDS */
-form {
+.form-container {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    
+}
+
+form {
     margin-top: 10%;
+    align-self: center;
+    width: 100%;
 }
 
 label {
     color: var(--cream-text);
     font-family: Rubik Lines;
     font-size: 1.7rem;
-    text-align: center;
 }
 
 #email-input {
@@ -123,4 +130,12 @@ label {
 button:active {
     transform: translateY(5px);
     transition: 200ms;
+}
+
+#error-message {
+    color: rgb(106, 16, 16);
+    font-family: Rubik;
+    font-size: 1rem;
+    margin-left: 35%;
+    margin-right: 35%;
 }

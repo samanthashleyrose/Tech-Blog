@@ -4,21 +4,23 @@
     <!-- HEADER -->
     {{> header}}
     <!-- INPUT FIELDS -->
-    <form action="/api/users/signup" method="POST">
-        <label for="input"></label>
-        <br>
-        <input id="email-input" type="text" placeholder="email">
-        <br>
-        <input id="pass-input" type="password" placeholder="password" name="password">
-        <br>
-        <button type="submit" id="login-btn">Login</button>
-        <button type="submit" id="sign-up-btn">Sign Up</button>
-    </form>
+    <div class="form-container">
+        <form action="/api/users/signup" method="POST">
+            <label for="input"></label>
+            <br>
+            <input id="email-input" type="text" placeholder="email">
+            <br>
+            <input id="pass-input" type="password" placeholder="password" name="password">
+            <br>
+            <button type="submit" id="login-btn">Login</button>
+            <button type="submit" id="sign-up-btn">Sign Up</button>
+            <!-- Display error message -->
+            {{#if errorMessage}}
+            <p id="error-message">{{errorMessage}}</p>
+            {{/if}}
+        </form>
+    </div>
 
-    <!-- Display error message -->
-    {{#if errorMessage}}
-    <p class="error-message">{{errorMessage}}</p>
-    {{/if}}
 
     <script src="../js/script.js"></script>
 </body>
