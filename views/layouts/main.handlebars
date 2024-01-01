@@ -12,10 +12,15 @@
 </head>
 
 <body>
-    {{{header}}}
-    {{{home}}}
+    {{!-- HEADER --}}
+    {{> header}}
+    {{!-- MAIN CONTENT AREA --}}
+    <main>
+    {{{> home}}}
+    </main>
 
-    <script href="../public/js/script.js"></script>
+    {{!-- GLOBAL SCRIPT --}}
+    <script href="../js/script.js"></script>
 </body>
 
 </html>
