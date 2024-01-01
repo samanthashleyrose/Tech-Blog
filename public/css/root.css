@@ -67,3 +67,8 @@ header {
     border-style: hidden;
     width: 30%;
 }
+
+button:active {
+    transform: translateY(5px);
+    transition: 200ms;
+}

@@ -22,11 +22,12 @@ router.post('/signup', async (req, res) => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
+            // res.json({ user: userData, message: 'You are now logged in!' });
             res.redirect('/homepage');
         });
     } catch (err) {
         if (err.name === 'SequelizeUniqueConstraintError') {
-            res.render('signup', { errorMessage: 'Email is already registered. Please use a different email.' });
+            res.render('login', { errorMessage: 'Email is already registered. Please use a different email.' });
         } else if (err.name === 'SequelizeValidationError') {
             // Handle other validation errors
             const validationErrors = err.errors.map(error => error.message);
@@ -46,7 +47,7 @@ router.post('/login', async (req, res) => {
         if (!userData) {
             res
                 .status(400)
-                .json({ message: 'Incorrect email or password, please try again' });
+                .json({ message: 'Incorrect email, please try again' });
             return;
         }
 
@@ -55,7 +56,7 @@ router.post('/login', async (req, res) => {
         if (!validPassword) {
             res
                 .status(400)
-                .json({ message: 'Incorrect email or password, please try again' });
+                .json({ message: 'Incorrect password, please try again' });
             return;
         }
 

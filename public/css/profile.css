@@ -116,7 +116,6 @@ header {
 }
 
 .profile-content {
-    /* background-color: var(--main-background-color); */
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -125,7 +124,7 @@ header {
     width: 95%;
 }
 
-#user-first-name {
+#username {
     background-color: var(--main-background-color);
     color: var(--brown-text);
     font-size: 1.2rem;
@@ -135,7 +134,6 @@ header {
     padding: 2%;
 }
 
-#user-last-name,
 #profile-email {
     background-color: var(--main-background-color);
     color: var(--brown-text);
@@ -144,4 +142,9 @@ header {
     border-radius: 5px;
     margin-bottom: 2%;
     padding: 2%;
+}
+
+button:active {
+    transform: translateY(5px);
+    transition: 200ms;
 }
