@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{> layouts/main title="Betcha - Dashboard"}}
+    {{> layouts/main cssPath="../css/dashboard.css"}}
+
+    <!-- GOOGLE FONTS -->
+    {{> partials/font}}
+</head>
+
+<body>
+    <!-- NAV & HEADER -->
+    {{> partials/header}}
+    <div class="dashboard-container">
+        <!-- NEW POST BUTTON -->
+        <div class="options-container">
+            <button id="new-post-btn">+ NEW POST</button>
+            <br>
+            <button id="view-drafts-btn">VIEW DRAFTS</button>
+        </div>
+    </div>
+</body>
+
+</html>
