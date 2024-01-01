@@ -4,8 +4,8 @@ const loginBtn = document.getElementById('login-btn');
 const handleLoginBtn = async (event) => {
     event.preventDefault();
 
-    const email = document.getElementById('#email-input').value.trim();
-    const password = document.getElementById('#pass-input').value.trim();
+    const email = document.getElementById('email-input').value.trim();
+    const password = document.getElementById('pass-input').value.trim();
 
     if (validateInput(email, password)) {
         const response = await fetch('/api/users/login', {
@@ -15,7 +15,7 @@ const handleLoginBtn = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/homepage');
         } else {
             alert(response.statusText);
         }

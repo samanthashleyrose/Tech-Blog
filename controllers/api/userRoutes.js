@@ -4,27 +4,36 @@ const { User } = require('../../models');
 // post route to create a new user 
 router.post('/signup', async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { name, email, password } = req.body;
 
+        const existingUser = await User.findOne({ where: { email } });
+
+        if (existingUser) {
+            // Handle case where the email is already registered
+            res.render('signup', { errorMessage: 'Email is already registered. Please use a different email.' });
+            return;
+        }
         const userData = await User.create({
+            name,
             email,
             password,
         });
-
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
-            res.redirect('/profile'); // Redirect to the profile page on successful signup
+            res.redirect('/homepage');
         });
     } catch (err) {
-        if (err.name === 'SequelizeValidationError') {
-            // Handle validation errors
+        if (err.name === 'SequelizeUniqueConstraintError') {
+            res.render('signup', { errorMessage: 'Email is already registered. Please use a different email.' });
+        } else if (err.name === 'SequelizeValidationError') {
+            // Handle other validation errors
             const validationErrors = err.errors.map(error => error.message);
-            res.render('login', { errorMessage: validationErrors.join(', ') });
+            res.render('signup', { errorMessage: validationErrors.join(', ') });
         } else {
-            console.error(err); // Log other errors to the console
-            res.render('login', { errorMessage: 'Error creating user. Please try again.' });
+            console.error(err);
+            res.render('signup', { errorMessage: 'Error creating user. Please try again.' });
         }
     }
 });
@@ -54,7 +63,7 @@ router.post('/login', async (req, res) => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
-            res.json({ user: userData, message: 'You are now logged in!' });
+            res.redirect('/homepage');
         });
 
     } catch (err) {

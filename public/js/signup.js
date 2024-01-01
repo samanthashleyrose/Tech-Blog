@@ -4,18 +4,19 @@ const signupBtn = document.getElementById('sign-up-btn');
 const handleSignUpBtn = async (event) => {
     event.preventDefault();
 
-    const email = document.getElementById('#email-input').value.trim();
-    const password = document.getElementById('#pass-input').value.trim();
+    const name = document.getElementById('name-input').value.trim();
+    const email = document.getElementById('email-input').value.trim();
+    const password = document.getElementById('pass-input').value.trim();
 
-    if (validateInput(email, password)) {
-        const response = await fetch('/api/users/login', {
+    if (validateInput(name, email, password)) {
+        const response = await fetch('/api/users/signup', {
             method: 'POST',
-            body: JSON.stringify({ email, password }),
+            body: JSON.stringify({ name, email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/homepage');
         } else {
             alert(response.statusText);
         }
@@ -39,7 +40,7 @@ function validateInput(email, password) {
         errorMessage.innerText = 'Must enter a valid email';
         return false;
     } else {
-        errorMessage.innerText = ''; // Clear any previous error message
+        errorMessage.innerText = '';
         return true;
     }
 }
