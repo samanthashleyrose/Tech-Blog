@@ -50,6 +50,25 @@ router.post('/login', async (req, res) => {
     }
 });
 
+router.post('/signup', async (req, res) => {
+    try {
+        const userData = await User.create({
+            email: req.body.email,
+            password: req.body.password,
+        });
+
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.logged_in = true;
+
+            res.redirect('/profile'); // Redirect to the profile page on successful signup
+        });
+    } catch (err) {
+        // Display error message on the login page
+        res.render('login', { errorMessage: 'Error creating user. Please try again.' });
+    }
+});
+
 // post route to logout a user
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
