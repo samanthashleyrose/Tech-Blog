@@ -9,17 +9,17 @@ router.get('/', (req, res) => {
         res.redirect('/homepage');
         return;
       }
-  res.render('login'); 
+  res.render('root'); 
 });
 
-// get route that directs user to profile page after sign up button is selected on the login screen
-router.get('/profile', withAuth, (req, res) => {
-  // if user is already logged in, redirect to homepage
-  if (req.session.logged_in) {
-      res.redirect('/homepage');
-      return;
-    }
-res.render('profile'); 
+// get route to redirect to login from root
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
+// get route to redirect to sign up from root
+router.get('/signup', (req, res) => {
+  res.render('signup');
 });
 
 module.exports = router;

@@ -6,13 +6,6 @@ router.post('/signup', async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        // Password criteria check
-        if (password.length < 8 || !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-            return res.render('login', {
-                errorMessage: 'Password must be at least 8 characters long and contain 1 special character.',
-            });
-        }
-
         const userData = await User.create({
             email,
             password,
@@ -25,8 +18,14 @@ router.post('/signup', async (req, res) => {
             res.redirect('/profile'); // Redirect to the profile page on successful signup
         });
     } catch (err) {
-        // Display error message on the login page
-        res.render('login', { errorMessage: 'Error creating user. Please try again.' });
+        if (err.name === 'SequelizeValidationError') {
+            // Handle validation errors
+            const validationErrors = err.errors.map(error => error.message);
+            res.render('login', { errorMessage: validationErrors.join(', ') });
+        } else {
+            console.error(err); // Log other errors to the console
+            res.render('login', { errorMessage: 'Error creating user. Please try again.' });
+        }
     }
 });
 
