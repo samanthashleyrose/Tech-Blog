@@ -52,9 +52,18 @@ router.post('/login', async (req, res) => {
 
 router.post('/signup', async (req, res) => {
     try {
+        const { email, password } = req.body;
+
+        // Password criteria check
+        if (password.length < 8 || !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            return res.render('login', {
+                errorMessage: 'Password must be at least 8 characters long and contain 1 special character.',
+            });
+        }
+
         const userData = await User.create({
-            email: req.body.email,
-            password: req.body.password,
+            email,
+            password,
         });
 
         req.session.save(() => {
