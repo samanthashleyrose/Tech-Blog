@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{> layouts/main title="Betcha - Drafts"}}
-    {{> layouts/main cssPath="../css/drafts.css"}}
-
-    <!-- GOOGLE FONTS -->
-    {{> partials/font}}
-</head>
+{{> head title="Betcha - Drafts" cssPath="/css/drafts.css"}}
 
 <body>
     <!-- NAV & HEADER -->
@@ -24,5 +13,3 @@
         {{> partials/update-draft-template}}
     </div>
 </body>
-
-</html>

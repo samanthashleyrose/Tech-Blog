@@ -1,16 +1,8 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{> layouts/main title="Betcha - Login"}}
-    {{> layouts/main cssPath="../css/login.css"}}
-
-    <!-- GOOGLE FONTS -->
-    {{> partials/font}}
-</head>
+{{> head title="Betcha - Login" cssPath="/css/login.css"}}
 
 <body>
     <!-- HEADER -->
-    {{> partials/header}}
+    {{> header}}
     <!-- INPUT FIELDS -->
     <form action="/api/users/signup" method="POST">
         <label for="input"></label>
