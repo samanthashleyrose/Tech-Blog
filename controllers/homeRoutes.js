@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const path = require('path');
+const { User } = require('../models');
 
 // get route for the root URL - LOGIN
 router.get('/', (req, res) => {
