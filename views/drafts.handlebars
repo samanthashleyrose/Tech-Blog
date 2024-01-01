@@ -14,28 +14,14 @@
 <body>
     <!-- NAV & HEADER -->
     {{> partials/header}}
-    <!-- DRAFTS -->
+    <!-- LIST OF ALL DRAFTS -->
     <div class="dashboard-container">
-        <!-- UPDATE POST TEMPLATE-->
-        <div class="posts-container">
-            <form class="post-card">
-                <div class="send-btn-container">
-                    <button class="save-post-btn">Update Draft</button>
-                    <button class="send-post-btn">Post</button>
-                </div>
-                <div class="post-header">
-                    <input id="post-title" placeholder="Add a Title" />
-                    <h5 id="post-author">Author/Date will automatically prefill</h5>
-                </div>
-                <textarea class="post-content" id="new-post-textarea" cols="30" rows="10"
-                    placeholder="Type your heart away here">
-                            </textarea>
-                <div class="category-buttons-container">
-                    <button class="select-btn">Select Category</button>
-                    <button class="create-btn">Create New Category</button>
-                </div>
-            </form>
+        <!-- NEW POST BUTTON -->
+        <div class="options-container">
+            <button id="new-post-btn">+ NEW POST</button>
         </div>
+        <!-- UPDATE POST TEMPLATE-->
+        {{> partials/update-draft-template}}
     </div>
 </body>
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{> layouts/main title="Betcha - New Post"}}
+    {{> layouts/main cssPath="../css/new-post-template.css"}}
+
+    <!-- GOOGLE FONTS -->
+    {{> partials/font}}
+</head>
+
+<body>
+    <!-- NAV & HEADER -->
+    {{> partials/header}}
+    <div class="dashboard-container">
+        <!-- NEW POST TEMPLATE-->
+        {{> partials/new-post-template}}
+    </div>
+</body>
+
+</html>
