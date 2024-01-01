@@ -73,7 +73,7 @@ header {
     width: 100%;
 }
 
-/* NEW POST BUTTON */
+/* OPTIONS CONTAINER */
 .options-container {
     display: block;
     text-align: center;
@@ -97,4 +97,148 @@ header {
     width: 30%;
 }
 
+button:active {
+    transform: translateY(5px);
+    transition: 200ms;
+}
 
+/* NEW POST TEMPLATE */
+#new-post-template {
+    display: none;
+}
+
+.posts-container {
+    display: block;
+    margin: 5%;
+}
+
+.post-card {
+    background-color: var(--header-color);
+    box-shadow: 1px 4px 5px rgba(69, 54, 13, 0.918);
+    border-radius: 5px;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin-top: 0%;
+    width: 80%;
+}
+
+.send-btn-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    width: 99%;
+}
+
+.send-post-btn {
+    background-color: var(--button-color);
+    color: var(--cream-text);
+    font-family: Rubik;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.save-post-btn {
+    background-color: var(--button-color);
+    color: var(--cream-text);
+    font-family: Rubik;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2%;
+    margin-right: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.post-header {
+    background-color: var(--main-background-color);
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    word-wrap: break-word;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 95%;
+}
+
+#post-title {
+    background-color: var(--main-background-color);
+    color: var(--brown-text);
+    text-shadow: 1px 1px 5px rgba(242, 231, 212, 0.5);
+    font-size: 1.5rem;
+    font-family: Rubik Lines;
+    display: block;
+    word-wrap: break-word;
+    text-align: left;
+    width: 100%;
+    margin: 2%;
+    border-color: none;
+    border-style: none;
+}
+
+#post-author {
+    color: var(--brown-text);
+    font-size: 1rem;
+    font-family: Rubik;
+    font-style: italic;
+    display: block;
+    word-wrap: break-word;
+    text-align: right;
+    width: 100%;
+    margin: 2.5%;
+}
+
+.post-content {
+    word-wrap: break-word;
+    width: 100%;
+    width: 95%;
+}
+
+#new-post-textarea {
+    background-color: var(--main-background-color);
+    color: var(--brown-text);
+    font-size: 1.2rem;
+    font-family: Rubik;
+    border-radius: 5px;
+    margin-top: 4%;
+    padding: 2%;
+}
+
+.category-buttons-container {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.select-btn,
+.create-btn {
+    background-color: var(--button-color);
+    color: var(--cream-text);
+    font-family: Rubik;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-right: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 22%;
+}
