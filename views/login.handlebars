@@ -1,21 +1,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betcha - login</title>
-    <link rel="stylesheet" href="/css/login.css">
+    {{> layouts/main title="Betcha - Login"}}
+    {{> layouts/main cssPath="../css/login.css"}}
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Rubik+Lines&display=swap" rel="stylesheet">
+    {{> partials/font}}
 </head>
 
 <body>
     <!-- HEADER -->
-    <header>
-        <div class="logo-position">
-            <h1 id="logo">BETCHA</h1>
-            <h2 id="subtitle">a tech blog</h2>
-        </div>
-    </header>
+{{> partials/header}}
     <!-- INPUT FIELDS -->
     <form>
         <label for="input"></label>

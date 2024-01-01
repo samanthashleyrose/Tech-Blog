@@ -1,7 +1,18 @@
-{{> layouts/main title="Betcha - Home" cssPath="./public/css/home.css"}}
-{{> partials/header title="BETCHA"}}
-{{> partials/font}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{> layouts/main title="Betcha - Home"}}
+    {{> layouts/main cssPath="../css/home.css"}}
+
+    <!-- GOOGLE FONTS -->
+    {{> partials/font}}
+</head>
 <main>
+    <!-- NAV & HEADER -->
+    {{> partials/nav-and-header}}
     <!-- BLOG POSTS -->
     <div class="dashboard-container">
         <!-- SIDEBAR NAV -->
