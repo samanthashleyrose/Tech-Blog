@@ -22,6 +22,27 @@ router.get('/homepage', (req, res) => {
   res.render('homepage');
 });
 
+// get route to redirect to dashboard
+router.get('/dashboard', (req, res) => {
+  res.render('dashboard');
+});
+
+// get route to logout user
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
+// post route to logout a user
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+      req.session.destroy(() => {
+          res.status(204).end();
+      });
+  } else {
+      res.status(404).end();
+  }
+});
+
 // get route to render the profile page
 router.get('/profile', withAuth, async (req, res) => {
   try {
