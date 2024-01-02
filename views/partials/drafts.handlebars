@@ -1,17 +1,18 @@
-<div id="new-post-template">
-    <!-- VIEW DRAFTS BUTTON -->
+<!-- LIST OF ALL DRAFTS -->
+<div id="view-drafts">
+    <!-- NEW POST BUTTON -->
     <div>
-        <button id="new-post-drafts-btn">VIEW DRAFTS</button>
+        <button id="drafts-new-post-btn">+ NEW POST</button>
     </div>
-    <!-- NEW POST TEMPLATE-->
+    <!-- UPDATE POST TEMPLATE-->
     <div class="posts-container">
         <form class="post-card">
             <div class="send-btn-container">
-                <button class="save-post-btn">Save Draft</button>
+                <button class="save-post-btn">Update Draft</button>
                 <button class="send-post-btn">Post</button>
             </div>
             <div class="post-header">
-                <input id="post-title" placeholder="Add a Title" />
+                <input id="post-title" placeholder="Saved Title if any" />
                 <h5 id="post-author">{{userData.name}}</h5>
             </div>
             <textarea class="post-content" id="new-post-textarea" cols="30" rows="10"
