@@ -10,6 +10,7 @@ const newPostBtn = document.getElementById('new-post-btn');
 const optionsContainer = document.querySelector('.options-container');
 const savePostBtn = document.querySelector('.save-post-btn');
 const sendPostBtn = document.querySelector('.send-post-btn');
+const newPostOnDraftsPage = document.getElementById('drafts-new-post-btn');
 
 // DRAFT BUTTONS
 const viewDraftsBtn = document.getElementById('view-drafts-btn');
@@ -66,6 +67,13 @@ viewDraftsOnNewPostPage.addEventListener('click', (event) => {
     event.preventDefault();
     viewDraftsPage.style.display = 'block';
     newPostTemplate.style.display = 'none';
+    optionsContainer.style.display = 'none';
+});
+
+newPostOnDraftsPage.addEventListener('click', (event) => {
+    event.preventDefault();
+    viewDraftsPage.style.display = 'none';
+    newPostTemplate.style.display = 'block';
     optionsContainer.style.display = 'none';
 });
 
