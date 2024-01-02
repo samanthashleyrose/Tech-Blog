@@ -14,6 +14,7 @@ const sendPostBtn = document.querySelector('.send-post-btn');
 // DRAFT BUTTONS
 const viewDraftsBtn = document.getElementById('view-drafts-btn');
 const viewDraftsPage = document.getElementById('view-drafts');
+const viewDraftsOnNewPostPage = document.getElementById('new-post-drafts-btn');
 
 // Functions for each nav button
 const handleHomeBtn = () => {
@@ -58,6 +59,13 @@ sendPostBtn.addEventListener('click', (event) => {
 viewDraftsBtn.addEventListener('click', (event) => {
     event.preventDefault();
     viewDraftsPage.style.display = 'block';
+    optionsContainer.style.display = 'none';
+});
+
+viewDraftsOnNewPostPage.addEventListener('click', (event) => {
+    event.preventDefault();
+    viewDraftsPage.style.display = 'block';
+    newPostTemplate.style.display = 'none';
     optionsContainer.style.display = 'none';
 });
 
