@@ -52,7 +52,7 @@ router.get('/profile', withAuth, async (req, res) => {
       });
 
       // render the profile view with user data
-      res.render('profile', { userData });
+      res.render('profile', { user: userData });
   } catch (err) {
       console.error(err);
       res.status(500).json({ message: 'Internal Server Error' });
