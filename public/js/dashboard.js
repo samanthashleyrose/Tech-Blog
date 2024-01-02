@@ -1,3 +1,6 @@
+// GLOBAL VARIABLES
+const optionsContainer = document.querySelector('.options-container');
+
 // NAV BUTTONS
 const homeBtn = document.getElementById('home');
 const dashboardBtn = document.getElementById('dashboard');
@@ -7,9 +10,8 @@ const logoutBtn = document.getElementById('logout');
 // POST BUTTONS
 const newPostTemplate = document.getElementById('new-post-template');
 const newPostBtn = document.getElementById('new-post-btn');
-const optionsContainer = document.querySelector('.options-container');
-const savePostBtn = document.querySelector('.save-post-btn');
-const sendPostBtn = document.querySelector('.send-post-btn');
+const savePostBtn = document.getElementById('save-post-btn');
+const sendPostBtn = document.getElementById('send-post-btn');
 const newPostOnDraftsPage = document.getElementById('drafts-new-post-btn');
 
 // DRAFT BUTTONS

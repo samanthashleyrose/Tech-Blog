@@ -134,7 +134,7 @@ button:active {
     width: 99%;
 }
 
-.send-post-btn {
+#send-post-btn {
     background-color: var(--button-color);
     color: var(--cream-text);
     font-family: Rubik;
@@ -149,7 +149,7 @@ button:active {
     padding-bottom: 1%;
 }
 
-.save-post-btn {
+#save-post-btn {
     background-color: var(--button-color);
     color: var(--cream-text);
     font-family: Rubik;
@@ -226,8 +226,8 @@ button:active {
     flex-wrap: nowrap;
 }
 
-.select-btn,
-.create-btn {
+#select-btn,
+#create-btn {
     background-color: var(--button-color);
     color: var(--cream-text);
     font-family: Rubik;
