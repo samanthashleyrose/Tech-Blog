@@ -33,6 +33,13 @@ const handleLogOutBtn = () => {
     document.location.replace('/login');
 };
 
+// Function to toggle visibility
+function toggleVisibility(element, displayValue) {
+    if (element) {
+        element.style.display = displayValue;
+    }
+}
+
 // Event Listeners
 homeBtn.addEventListener('click', handleHomeBtn);
 dashboardBtn.addEventListener('click', handleDashboardBtn);
@@ -41,8 +48,8 @@ logoutBtn.addEventListener('click', handleLogOutBtn);
 
 newPostBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    newPostTemplate.style.display = 'block';
-    optionsContainer.style.display = 'none';
+    toggleVisibility(newPostTemplate, 'block');
+    toggleVisibility(optionsContainer, 'none');
 });
 
 savePostBtn.addEventListener('click', (event) => {
@@ -61,21 +68,21 @@ sendPostBtn.addEventListener('click', (event) => {
 
 viewDraftsBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    viewDraftsPage.style.display = 'block';
-    optionsContainer.style.display = 'none';
+    toggleVisibility(viewDraftsPage, 'block');
+    toggleVisibility(optionsContainer, 'none');
 });
 
 viewDraftsOnNewPostPage.addEventListener('click', (event) => {
     event.preventDefault();
-    viewDraftsPage.style.display = 'block';
-    newPostTemplate.style.display = 'none';
-    optionsContainer.style.display = 'none';
+    toggleVisibility(viewDraftsPage, 'block');
+    toggleVisibility(newPostTemplate, 'none');
+    toggleVisibility(optionsContainer, 'none');
 });
 
 newPostOnDraftsPage.addEventListener('click', (event) => {
     event.preventDefault();
-    viewDraftsPage.style.display = 'none';
-    newPostTemplate.style.display = 'block';
-    optionsContainer.style.display = 'none';
+    toggleVisibility(viewDraftsPage, 'none');
+    toggleVisibility(newPostTemplate, 'block');
+    toggleVisibility(optionsContainer, 'none');
 });
 
